@@ -1,0 +1,10 @@
+version: '2'
+services:
+  express-docker:
+    container_name: express-docker-node
+    restart: always
+    volumes:
+    - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
+    build: .
+    ports:
+      - '8080:8080'
